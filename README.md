@@ -39,7 +39,7 @@ and the table is again sorted based on the last selected column only.</li>
 <li>
 <h2>After Clicking Distance</h2>
 <p align="center">
-  <img src="screenshots/clicked_distance.png" width="500"/>
+  <img src="screenshots/cliked_distance.png" width="500"/>
 </p>
 </li>
 
