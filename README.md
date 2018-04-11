@@ -27,3 +27,55 @@ and the table is again sorted based on the last selected column only.</li>
 </ol>
 
 <h1>ScreenShots</h1>
+<ol>
+<li>
+<h2>Main Screen</h2>
+<cation>Already sorted with serial number ! </caption>
+<p align="center">
+  <img src="screenshots/main.png" width="500"/>
+</p>
+</li>
+
+<li>
+<h2>After Clicking Distance</h2>
+<p align="center">
+  <img src="screenshots/clicked_distance.png" width="500"/>
+</p>
+</li>
+
+<li>
+<h2>Clicked : Distance First -> Then Rate </h2>
+<p align="center">
+  <img src="screenshots/first_distance_than_rate_clicked.png" width="500"/>
+</p>
+</li>
+
+<li>
+<h2>Clicked : Distance First -> Then Completion Date </h2>
+<p align="center">
+  <img src="screenshots/first_distance_than_completiondate_clicked.png" width="500"/>
+</p>
+</li>
+
+<li>
+<h2>Clicked : Rate</h2>
+<p align="center">
+  <img src="screenshots/first_rate_clicked.png" width="500"/>
+</p>
+</li>
+
+<li>
+<h2>Clicked : Project Size</h2>
+<p align="center">
+  <img src="screenshots/first_project_size_clicked.png" width="500"/>
+</p>
+</li>
+
+<li>
+<h2>Clicked : Project Size First -> then Compleation Date</h2>
+<p align="center">
+  <img src="screenshots/first_project_size_than_completion_date.png" width="500"/>
+</p>
+</li>
+
+</ol>
