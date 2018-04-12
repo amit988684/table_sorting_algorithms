@@ -20,7 +20,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/1.11/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '%38q^@(7aag$nu0ti7zv3=l(q(!zg07_m2y*b%s=2u!q_!o=_u'
+# SECRET_KEY = '%38q^@(7aag$nu0ti7zv3=l(q(!zg07_m2y*b%s=2u!q_!o=_u'
+# import os
+SECRET_KEY = os.environ['SECRET_KEY']
 
 # SECURITY WARNING: don't run with debug turned on in production!
 # DEBUG = False
@@ -146,14 +148,19 @@ django.setup()
 # }
 
 
-import dj_database_url
+# import dj_database_url
+#
+# ENVIRONMENT = 'production'
+# DEBUG = False
+ALLOWED_HOSTS = ['tablesortingalgorithms.herokuapp.com','127.0.0.1']
+# DATABASES['default'] = dj_database_url.config(
+#     default='postgres://fpxptcwyrfrxbk:d4a8b92013c9ea2532fa5e2881400a7c3aa1cf32a158865e44bff19e55b5c541@ec2-23-23-142-5.compute-1.amazonaws.com:5432/dc1biu8dtum5gp'
+# )
 
-ENVIRONMENT = 'production'
-DEBUG = False
-ALLOWED_HOSTS = ['tablesortingalgorithms.herokuapp.com']
-DATABASES['default'] = dj_database_url.config(
-    default='postgres://fpxptcwyrfrxbk:d4a8b92013c9ea2532fa5e2881400a7c3aa1cf32a158865e44bff19e55b5c541@ec2-23-23-142-5.compute-1.amazonaws.com:5432/dc1biu8dtum5gp'
-)
+import dj_database_url
+db_from_env = dj_database_url.config(conn_max_age=500)
+DATABASES['default'].update(db_from_env)
+
 import django_heroku
 django_heroku.settings(locals())
 STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
