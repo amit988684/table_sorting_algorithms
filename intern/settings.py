@@ -21,14 +21,11 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = '%38q^@(7aag$nu0ti7zv3=l(q(!zg07_m2y*b%s=2u!q_!o=_u'
-# import os
-# SECRET_KEY = os.environ['SECRET_KEY']
 
 # SECURITY WARNING: don't run with debug turned on in production!
-# DEBUG = False
+DEBUG = False
 
-# ALLOWED_HOSTS = ['tablesortingalgorithms.herokuapp.com']
-
+ALLOWED_HOSTS = ['tablesortingalgorithms.herokuapp.com','127.0.0.1']
 
 # Application definition
 
@@ -78,13 +75,6 @@ WSGI_APPLICATION = 'intern.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/1.11/ref/settings/#databases
-# import dj_database_url
-#
-# DATABASES = {
-#     'default': dj_database_url.config(
-#         default='sqlite:////{0}'.format(os.path.join(BASE_DIR, 'db.sqlite3'))
-#     )
-# }
 
 DATABASES = {
     'default': {
@@ -139,28 +129,17 @@ os.environ.setdefault("DJANGO_SETTINGS_MODULE", "mysite.settings")
 django.setup()
 
 
-# SECRET_KEY = config('SECRET_KEY')
-# DEBUG = config('DEBUG', default=False, cast=bool)
+# DEBUG = False
+# ALLOWED_HOSTS =  ['project-name.herokuapp.com', '.yourdomain.com']
 # DATABASES = {
-#     'default': dj_database_url.config(
-#         default=config('DATABASE_URL')
-#     )
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+#     }
 # }
 
-
-# import dj_database_url
-#
-# ENVIRONMENT = 'production'
-DEBUG = False
-ALLOWED_HOSTS = ['https://tablesortingalgorithms.herokuapp.com/','127.0.0.1']
-# DATABASES['default'] = dj_database_url.config(
-#     default='postgres://fpxptcwyrfrxbk:d4a8b92013c9ea2532fa5e2881400a7c3aa1cf32a158865e44bff19e55b5c541@ec2-23-23-142-5.compute-1.amazonaws.com:5432/dc1biu8dtum5gp'
-# )
-
+# add this
 import dj_database_url
-db_from_env = dj_database_url.config(conn_max_age=500)
+db_from_env = dj_database_url.config()
 DATABASES['default'].update(db_from_env)
-
-import django_heroku
-django_heroku.settings(locals())
-STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
+DATABASES['default']['CONN_MAX_AGE'] = 500
