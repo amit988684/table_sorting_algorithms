@@ -49,4 +49,4 @@ webencodings==0.5.1
 Werkzeug==0.14.1
 whichcraft==0.4.1
 whitenoise==3.3.1
-
+django_tables2
