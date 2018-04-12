@@ -171,3 +171,5 @@ DATABASES['default'].update(db_from_env)
 #         default=dj_database_url.config('DATABASE_URL')
 #     )
 # }
+import django_heroku
+django_heroku.settings(locals())
