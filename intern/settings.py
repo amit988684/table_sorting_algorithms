@@ -158,3 +158,11 @@ ALLOWED_HOSTS = ['']
 DATABASES['default'] = dj_database_url.config(
     default='postgres://fpxptcwyrfrxbk:d4a8b92013c9ea2532fa5e2881400a7c3aa1cf32a158865e44bff19e55b5c541@ec2-23-23-142-5.compute-1.amazonaws.com:5432/dc1biu8dtum5gp'
 )
+
+# SECRET_KEY = config('SECRET_KEY')
+# DEBUG = config('DEBUG', default=False, cast=bool)
+# DATABASES = {
+#     'default': dj_database_url.config(
+#         default=dj_database_url.config('DATABASE_URL')
+#     )
+# }
