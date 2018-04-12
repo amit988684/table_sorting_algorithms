@@ -48,7 +48,7 @@ django-scheduler==0.8.8
 django-simple-blog==0.2.1
 django-simple-math-captcha==1.0.7
 django-sorting==0.1
-django-tables2==1.21.2
+git+https://github.com/amit988684/django-tables2
 django-vote==2.1.6
 djangorestframework==3.7.7
 easy-thumbnails==2.5

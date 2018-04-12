@@ -14,11 +14,7 @@ import os
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-STATIC_ROOT = os.path.join(BASE_DIR,'static')
-STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
-STATICFILES_DIRS = (
-    os.path.join(BASE_DIR, 'static'),
-)
+
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.11/howto/deployment/checklist/
@@ -27,9 +23,9 @@ STATICFILES_DIRS = (
 SECRET_KEY = '%38q^@(7aag$nu0ti7zv3=l(q(!zg07_m2y*b%s=2u!q_!o=_u'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-# DEBUG = True
+DEBUG = True
 
-# ALLOWED_HOSTS = []
+ALLOWED_HOSTS = []
 
 
 # Application definition
@@ -144,30 +140,3 @@ django.setup()
 # import django_heroku
 # django_heroku.settings(locals())
 # STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
-
-
-# from .base import
-
-# from .settings import *
-
-import dj_database_url
-
-ENVIRONMENT = 'production'
-DEBUG = True
-ALLOWED_HOSTS = ['tablesortingalgorithms.herokuapp.com']
-DATABASES['default'] = dj_database_url.config(
-    default='postgres://fpxptcwyrfrxbk:d4a8b92013c9ea2532fa5e2881400a7c3aa1cf32a158865e44bff19e55b5c541@ec2-23-23-142-5.compute-1.amazonaws.com:5432/dc1biu8dtum5gp'
-)
-
-db_from_env = dj_database_url.config()
-DATABASES['default'].update(db_from_env)
-
-
-
-# SECRET_KEY = config('SECRET_KEY')
-# DEBUG = config('DEBUG', default=False, cast=bool)
-# DATABASES = {
-#     'default': dj_database_url.config(
-#         default=dj_database_url.config('DATABASE_URL')
-#     )
-# }
