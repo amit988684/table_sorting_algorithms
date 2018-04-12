@@ -25,7 +25,7 @@ SECRET_KEY = '%38q^@(7aag$nu0ti7zv3=l(q(!zg07_m2y*b%s=2u!q_!o=_u'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['tablesortingalgorithms.herokuapp.com','127.0.0.1']
+ALLOWED_HOSTS = ['https://tablesortingalgorithms.herokuapp.com/','127.0.0.1']
 
 # Application definition
 
