@@ -45,7 +45,6 @@ django-rest-auth==0.9.3
 git+https://github.com/amit988684/table_sorting_algorithms
 django-vote==2.1.6
 easy-thumbnails==2.5
-dj-database-url
 enum34==1.1.6
 environ==1.0
 future==0.16.0
