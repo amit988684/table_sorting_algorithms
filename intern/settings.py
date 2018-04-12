@@ -20,12 +20,12 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/1.11/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '%38q^@(7aag$nu0ti7zv3=l(q(!zg07_m2y*b%s=2u!q_!o=_u'
+# SECRET_KEY = '%38q^@(7aag$nu0ti7zv3=l(q(!zg07_m2y*b%s=2u!q_!o=_u'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+# DEBUG = False
 
-ALLOWED_HOSTS = ['tablesortingalgorithms.herokuapp.com']
+# ALLOWED_HOSTS = ['tablesortingalgorithms.herokuapp.com']
 
 
 # Application definition
@@ -137,6 +137,23 @@ os.environ.setdefault("DJANGO_SETTINGS_MODULE", "mysite.settings")
 django.setup()
 
 
+# SECRET_KEY = config('SECRET_KEY')
+# DEBUG = config('DEBUG', default=False, cast=bool)
+# DATABASES = {
+#     'default': dj_database_url.config(
+#         default=config('DATABASE_URL')
+#     )
+# }
+
+
+import dj_database_url
+
+ENVIRONMENT = 'production'
+DEBUG = False
+ALLOWED_HOSTS = ['tablesortingalgorithms.herokuapp.com']
+DATABASES['default'] = dj_database_url.config(
+    default='DATABASE_URL_HERE'
+)
 import django_heroku
 django_heroku.settings(locals())
 STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
