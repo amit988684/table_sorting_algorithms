@@ -75,7 +75,6 @@ pdfrw==0.4
 Pillow==5.0.0
 pinax-calendars==2.0.4
 pipenv==11.9.0
-pkg-resources==0.0.0
 poyo==0.4.1
 psycopg2==2.7.4
 psycopg2-binary==2.7.4
