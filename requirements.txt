@@ -63,7 +63,7 @@ oauthlib==2.0.6
 ordereddict==1.1
 pathlib==1.0.1
 pdfrw==0.4
-Pillow==5.0.0
+Pillow==6.2.0
 pinax-calendars==2.0.4
 pipenv==11.9.0
 poyo==0.4.1
